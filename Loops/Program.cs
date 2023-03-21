@@ -5,16 +5,12 @@ namespace Loops
 {
     internal class Program
     {
-        static bool gameOn = true;
         static bool winner = false;
         static int winningNumber = 7;
         static bool askedForHint = false;
         static void Main(string[] args)
         {
-            while (gameOn)
-            {
-                GuessingGame();
-            }
+            GuessingGame();
         }
 
         /// <summary>
@@ -60,7 +56,6 @@ namespace Loops
                         // Winner
                         Console.WriteLine($"{winningNumber} was the correct Number");
                         // Stop Game
-                        gameOn = false;
                         winner = true;
                         break;
                     }
@@ -82,7 +77,7 @@ namespace Loops
             if (PlayAgain())
             {
                 // if yes start a new game
-                Console.WriteLine("Try asking for a hint next time");
+                Console.WriteLine("Try asking for a hint this time");
                 GuessingGame();
             }
 
